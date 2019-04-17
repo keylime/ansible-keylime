@@ -3,5 +3,5 @@
 - include: packages.yml
 - include: git-repos.yml
 - include: tpm2-software.yml
-- include: python-keylime.yml
+- include: keylime.yml
 - include: rust-keylime.yml

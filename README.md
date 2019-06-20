@@ -3,7 +3,7 @@ Ansible Keylime
 
 [![Build Status](https://travis-ci.org/keylime/ansible-keylime.svg?branch=master)](https://travis-ci.org/keylime/ansible-keylime) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/keylime-project/community)
 
-Ansible role to deploy [Python Keylime](https://github.com/keylime/python-keylime)
+Ansible role to deploy [Keylime](https://github.com/keylime/keylime)
 alongside the [Keylime Rust Cloud Agent](https://github.com/keylime/rust-keylime) against a Hardware TPM.
 
 The role is currently configured to work with Fedora 29. Contributions are welcome,

@@ -77,3 +77,18 @@
   dnf:
       name: PyYAML
       state: latest
+
+- name: install tpm2-tss
+  dnf:
+      name: tpm2-tss
+      state: latest
+
+- name: install tpm2-tools
+  dnf:
+      name: tpm2-tools
+      state: latest
+
+- name: install tpm2-abrmd
+  dnf:
+      name: tpm2-tss
+      state: latest

@@ -3,18 +3,13 @@ Ansible Keylime
 
 [![Build Status](https://travis-ci.org/keylime/ansible-keylime.svg?branch=master)](https://travis-ci.org/keylime/ansible-keylime) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/keylime-project/community)
 
-Ansible role to deploy [Keylime](https://github.com/keylime/keylime)
-alongside the [Keylime Rust Cloud Agent](https://github.com/keylime/rust-keylime) against a Hardware TPM.
+Ansible role to deploy [Keylime](https://github.com/keylime/keylime) against a Hardware TPM.
 
 The role is currently configured to work with Fedora 29. Contributions are welcome,
 should anyone wish to have this role provision other Linux distributions.
 
 For details on using Keylime, please consult the
 [project documentation](https://keylime-docs.readthedocs.io/en/latest/)
-
-Please note that the rust cloud agent is still under early stages of Development.
-Those wishing to test drive keylimes functionality should use the existing
-python based cloud agent `keylime_agent` until later notice.
 
 Usage
 -----
@@ -64,20 +59,6 @@ Vagrant, port 443 will be forwarded from the guest to port 8443 on the host.
 This will result in the web application being available on url:
 
 https://localhost:8443/webapp/
-
-Rust Cloud agent
----------------
-
-To start the rust cloud agent, navigate to it's repository directory and use
-cargo to run:
-
-```
-[root@localhost rust-keylime]# RUST_LOG=keylime_agent=trace cargo run
-    Finished dev [unoptimized + debuginfo] target(s) in 0.28s
-     Running `target/debug/keylime_agent`
- INFO  keylime_agent > Starting server...
- INFO  keylime_agent > Listening on http://127.0.0.1:1337
-```
 
 License
 -------

@@ -12,8 +12,3 @@
   get_url:
     url: http://sourceforge.net/projects/ibmswtpm2/files/ibmtpm1119.tar.gz
     dest: /root/ibmtpm
-
-- name: Clone rust-keylime
-  git:
-    repo: https://github.com/redhat-university-partnerships/keylime
-    dest: /root/rust-keylime

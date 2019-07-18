@@ -78,7 +78,7 @@
       name: PyYAML
       state: latest
 
--name: install redhat-rpm-config
+- name: install redhat-rpm-config
   dnf:
       name: redhat-rpm-config
       state: latest

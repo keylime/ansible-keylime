@@ -1,5 +1,4 @@
 ---
 # tasks file for opencit-ansible
 - include: packages.yml
-- include: git-repos.yml
 - include: keylime.yml

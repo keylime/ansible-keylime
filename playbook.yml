@@ -3,7 +3,7 @@
   become: true
   pre_tasks:
     - name: 'install python2'
-      raw: sudo dnf -y install python
+      raw: sudo dnf -y install python2
     - name: 'install libselinux-python'
       raw: sudo dnf -y install libselinux-python
   roles:

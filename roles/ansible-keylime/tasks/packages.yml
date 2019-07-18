@@ -78,6 +78,11 @@
       name: PyYAML
       state: latest
 
+-name: install redhat-rpm-config
+  dnf:
+      name: redhat-rpm-config
+      state: latest
+
 - name: install tpm2-tss
   dnf:
       name: tpm2-tss

@@ -20,6 +20,32 @@ Run the example playbook against your target remote host(s).
 ansible-playbook -i your_hosts playbook.yml
 ```
 
+Get started with Keylime
+------------------------
+
+The best way to get started is to read the [Keylime Documentation]https://keylime-docs.readthedocs.io/en/latest/), however if you're keen to get started right away. Follow these steps.
+
+You first of all need to decide on if you will use the revocation framework, if so you will need to install golang and set the following value in `/etc/keylime.conf`
+
+`ca_implementation = cfssl`
+
+Alternately you can set `openssl` which has no other dependencies.
+
+You now need to start the following three services.
+
+`# keylime_verifier`
+
+`# keylime_registrar`
+
+`# keylime_agent`
+
+| Note: Keylime Agent requires a TPM active that the agent can take ownership on|
+| --- |
+
+You can now set up a use case, a good first scenario to try out would be [IMA Integrity Monitoring](https://keylime-docs.readthedocs.io/en/latest/user_guide/runtime_ima.html)
+
+For more detailed set up scenarios, see the [Keylime documentation](https://keylime-docs.readthedocs.io/en/latest/user_guide/runtime_ima.html)
+
 Vagrant
 -------
 

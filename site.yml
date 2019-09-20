@@ -1,5 +1,0 @@
----
-- hosts: all
-  sudo: yes
-  roles:
-    - { role: "ansible-keylime", ansible-keylime_version: "0.0.1" }

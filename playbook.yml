@@ -2,9 +2,12 @@
 - hosts: all
   become: true
   pre_tasks:
-    - name: 'install python3'
-      raw: sudo dnf -y install python3
-    - name: 'install libselinux-python3'
-      raw: sudo dnf -y install libselinux-python3
+    - name: Probe python installation
+      raw: command -v python3 || true
+      changed_when: false
+      register: python_available
+    - name: Bootstrap a host without python installed
+      raw: dnf install python3 python3-libselinux
+      when: "'python' not in python_available.stdout"
   roles:
     - ansible-keylime

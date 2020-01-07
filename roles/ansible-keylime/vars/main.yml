@@ -1,7 +1,31 @@
 ---
+# requirements
+dependencies:
+  ['PyYAML',
+   'autoconf',
+   'autoconf-archive',
+   'automake',
+   'compat-openssl10-devel',
+   'dbus-devel',
+   'gcc',
+   'git',
+   'glib2-devel',
+   'libcurl-devel',
+   'libgcrypt-devel',
+   'libstdc++-devel',
+   'libtool',
+   'libffi-devel',
+   'pkg-config',
+   'python3-devel',
+   'python3-yaml',
+   'redhat-rpm-config',
+   'tpm2-tools',
+   'tpm2-tss',
+   'uriparser-devel']
+
 # section for vars
 shell_profiles:
-- .bash_profile
+  - .bash_profile
 
 # version variables
 tpm2_tss_version: a0d6f7d
@@ -12,4 +36,3 @@ tpm2_abrmd_version: master
 tpm2_tss_configure_args: "./configure --prefix=/usr --disable-doxygen-doc"
 tmp2_tools_configure_args: "TSS2_SYS_CFLAGS=' ' TSS2_SYS_LIBS='-ltss2-sys -L/usr/lib/' ./configure --prefix=/usr/local"
 tpm2_abrmd_configure_args: "SAPI_CFLAGS=' ' SAPI_LIBS='-ltss2-sys -L/usr/lib/' ./configure --prefix=/usr"
-

@@ -1,10 +1,11 @@
+---
 - name: Clone keylime
   git:
     repo: https://github.com/keylime/keylime
     dest: /root/keylime
 
 - name: Run python setup tools to install Keylime
-  command: python3.7 setup.py install
+  command: python3 setup.py install
   args:
     chdir: /root/keylime
 

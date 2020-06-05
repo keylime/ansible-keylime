@@ -5,7 +5,8 @@
 Ansible role to deploy [Keylime](https://github.com/keylime/keylime) against
 a Hardware TPM.
 
-The role is currently configured to work with Fedora 30 and 31.
+The role is currently configured to work with Fedora 32.
+
 Contributions are welcome, should anyone wish to have this role provision other
 Linux distributions.
 

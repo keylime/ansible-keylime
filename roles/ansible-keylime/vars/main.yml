@@ -22,6 +22,7 @@ dependencies:
    'python3-yaml',
    'python3-simplejson',
    'python3-sqlalchemy',
+   'python3-alembic',
    'redhat-rpm-config',
    'tpm2-tools',
    'tpm2-tss',

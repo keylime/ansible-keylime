@@ -1,3 +1,0 @@
----
-- name: Move /etc/keylime.conf into /etc
-  command: mv /root/keylime/keylime.conf /etc/keylime.conf

@@ -10,7 +10,7 @@ dependencies:
    'gcc',
    'git',
    'glib2-devel',
-   'keylime'
+   'keylime',
    'libcurl-devel',
    'libgcrypt-devel',
    'libstdc++-devel',

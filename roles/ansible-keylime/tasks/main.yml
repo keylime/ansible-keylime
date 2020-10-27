@@ -1,9 +1,4 @@
 ---
-- name: Upgrade all packages
-  dnf:
-    name: "*"
-    state: latest
-
 - name: Install dependencies
   dnf:
     name: "{{ dependencies }}"

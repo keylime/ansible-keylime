@@ -26,7 +26,8 @@ dependencies:
    'redhat-rpm-config',
    'tpm2-tools',
    'tpm2-tss',
-   'uriparser-devel']
+   'uriparser-devel',
+   'efivar-devel']
 
 # section for vars
 shell_profiles:

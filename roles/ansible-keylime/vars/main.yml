@@ -1,11 +1,9 @@
 ---
 # requirements
 dependencies:
-  ['PyYAML',
-   'autoconf',
+  ['autoconf',
    'autoconf-archive',
    'automake',
-   'compat-openssl10-devel',
    'dbus-devel',
    'gcc',
    'git',
@@ -26,8 +24,13 @@ dependencies:
    'redhat-rpm-config',
    'tpm2-tools',
    'tpm2-tss',
+   'tpm2-tss-devel',
    'uriparser-devel',
-   'efivar-devel']
+   'efivar-devel',
+   'cargo',
+   'openssl-devel',
+   'zeromq-devel',
+   'libarchive-devel']
 
 # section for vars
 shell_profiles:

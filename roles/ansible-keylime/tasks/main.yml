@@ -3,3 +3,37 @@
   dnf:
     name: "{{ dependencies }}"
     state: latest
+
+- name: Install Rust 
+  shell: "curl https://sh.rustup.rs -sSf | sh -s -- -y"
+  changed_when: false
+
+- name: Set source $HOME
+  shell: "source $HOME/.cargo/env"
+  args:
+    chdir: /root/
+  changed_when: false  
+
+- name: Clone Rust-Keylime
+  git:
+    repo: https://github.com/keylime/rust-keylime
+    dest: /root/rust-keylime
+
+- name: Run Rust-Keylime Makefile
+  shell: "make && make install"
+  args:
+    chdir: /root/rust-keylime
+  changed_when: false
+
+- name: Run Cargo build
+  shell: "cargo build"
+  args:
+    chdir: /root/rust-keylime
+  changed_when: false
+
+- name: Set TPM2TOOLS_TCTI environment variable
+  lineinfile:
+    dest: /etc/environment
+    state: present
+    regexp: '^TPM2TOOLS_TCTI'
+    line: 'TPM2TOOLS_TCTI="device:/dev/tpmrm0"'

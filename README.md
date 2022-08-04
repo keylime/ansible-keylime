@@ -2,10 +2,10 @@
 
 [![Build Status](https://travis-ci.org/keylime/ansible-keylime.svg?branch=master)](https://travis-ci.org/keylime/ansible-keylime) [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/keylime-project/community)
 
-Ansible role to deploy [Keylime](https://github.com/keylime/keylime) against
+Ansible role to deploy [Keylime](https://github.com/keylime/keylime) with the [rust implementation of the keylime agent](https://github.com/keylime/rust-keylime) against
 a Hardware TPM.
 
-The role is currently configured to work with Fedora 32.
+The role is currently configured to work with Fedora 35.
 
 Contributions are welcome, should anyone wish to have this role provision other
 Linux distributions.
@@ -35,13 +35,15 @@ so you will need to install golang and set the following value in
 
 Alternately you can set `openssl` which has no other dependencies.
 
-You now need to start the following three services.
+You now need to start the following services.
 
 `# keylime_verifier`
 
 `# keylime_registrar`
 
-`# keylime_agent`
+To run the agent, navigate to the rust-keylime directory and start the agent. 
+
+`# RUST_LOG=keylime_agent=trace cargo run `
 
 | Note: Keylime Agent requires a TPM active that the agent can take ownership on|
 | --- |

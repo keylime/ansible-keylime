@@ -43,7 +43,7 @@ You now need to start the following services.
 
 To run the agent, navigate to the rust-keylime directory and start the agent. 
 
-`# RUST_LOG=keylime_agent=trace cargo run `
+`# RUST_LOG=keylime_agent=trace cargo run --bin keylime_agent `
 
 | Note: Keylime Agent requires a TPM active that the agent can take ownership on|
 | --- |

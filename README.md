@@ -54,15 +54,6 @@ Integrity Monitoring](https://keylime-docs.readthedocs.io/en/latest/user_guide/r
 For more detailed set up scenarios, see the [Keylime
 documentation](https://keylime-docs.readthedocs.io/en/latest/user_guide/runtime_ima.html)
 
-## WebApp
-
-The web application can be started with the command `keylime_webapp`. If using
-Vagrant, port 443 will be forwarded from the guest to port 8443 on the host.
-
-This will result in the web application being available on url:
-
-[https://localhost:8443/webapp/](https://localhost:8443/webapp/)
-
 ## License
 
 Apache 2.0

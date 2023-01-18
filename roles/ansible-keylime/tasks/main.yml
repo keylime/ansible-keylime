@@ -19,11 +19,14 @@
     repo: https://github.com/keylime/rust-keylime
     dest: /root/rust-keylime
 
-- name: Run Rust-Keylime Makefile
-  shell: "make && make install"
-  args:
+- name: Make Rust-Keylime
+  make:
     chdir: /root/rust-keylime
-  changed_when: false
+
+- name: Make install Rust-keylime
+  make:
+    target: install
+    chdir: /root/rust-keylime
 
 - name: Run Cargo build
   shell: "cargo build"

@@ -31,7 +31,8 @@ dependencies:
    'cargo',
    'openssl-devel',
    'zeromq-devel',
-   'libarchive-devel']
+   'libarchive-devel',
+   'clang']
 
 # section for vars
 shell_profiles:

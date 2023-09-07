@@ -4,6 +4,7 @@ dependencies:
   ['autoconf',
    'autoconf-archive',
    'automake',
+   'clang-devel',
    'dbus-devel',
    'gcc',
    'git',
